@@ -1,0 +1,8 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+/* Toggle B */
+input:checked ~ .dot {
+  transform: translateX(100%);
+  background-color: #22c55e;
+}

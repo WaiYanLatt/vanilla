@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="../assets/img/icon/icons/icons/logo.svg" />
+    <link rel="stylesheet" href="./assets/css/animate.min.css" />
+    <link rel="stylesheet" href="./assets/css/cus.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark:bg-slate-900">
+    <!-- Nav -->
+    <div class="bg-transparent dark:bg-slate-800 py-3 shadow-lg">
+      <div class="container mx-auto items-center">
+        <div class="flex justify-between items-center">
+          <!-- logo -->
+          <div class="">
+            <img
+              src="../assets/img/icon/icons/icons/vanilla-logo.svg"
+              alt=""
+              class="w-32"
+            />
+          </div>
+          <!-- nav-items -->
+          <div class="">
+            <ul class="flex space-x-5 font-semibold text-slate-500 dark:text-white cursor-pointer">
+              <li class="hover:text-green-500 duration-500 transition">Home</li>
+              <li class="hover:text-green-500 duration-500 transition">Why?</li>
+              <li class="hover:text-green-500 duration-500 transition">Featurs</li>
+              <li class="hover:text-green-500 duration-500 transition">Clients</li>
+            </ul>
+          </div>
+          <!-- dark mode -->
+          <div class="">
+            <!-- Toggle B -->
+            <label for="toggleB" class="flex items-center cursor-pointer">
+              <!-- toggle -->
+              <div class="relative">
+                <!-- input -->
+                <input type="checkbox" id="toggleB" class="sr-only" />
+                <!-- line -->
+                <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                <!-- dot -->
+                <div
+                  class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"
+                ></div>
+              </div>
+              <!-- label -->
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero-section -->
+    <section class="flex justify-center my-36 container mx-auto flex-col">
+      <div class="">
+        <h1 class="text-6xl mb-5 lg:text-8xl lg:mb-0 font-bold text-center dark:text-white headline">
+          Access.<span class="text-green-500 block lg:inline-block">Now.</span>
+        </h1>
+        <p
+          class="text-slate-400 lg:font-semibold font-bold text-center text-base headline"
+        >
+          Access any device at any time. From any
+          <span class="block lg:inline-block"
+            >where. Always secure and fast.</span
+          >
+        </p>
+      </div>
+      <div
+        class="mt-10 flex flex-col lg:flex-row justify-center items-center lg:space-x-5 space-y-5 lg:space-y-0"
+      >
+        <button
+          class="headline bg-green-500 py-3 w-56 rounded-full text-white font-semibold flex justify-center items-center outline outline-2 outline-green-500 hover:bg-green-700 hover:scale-105 duration-500 transition"
+        >
+          <img
+            src="../assets/img/icon/icons/icons/download-light.svg"
+            alt=""
+            class="mr-5"
+          />
+          Download
+        </button>
+        <button
+          class="headline py-3 w-56 rounded-full text-green-500 font-semibold flex justify-center items-center outline outline-2 outline-green-500 hover:scale-105 duration-500 transition"
+        >
+          <img
+            src="../assets/img/icon/icons/icons/cart-shopping-light.svg"
+            alt=""
+            class="mr-5"
+          />
+          Order Now
+        </button>
+      </div>
+    </section>
+
+    <!-- why-section -->
+    <section class="bg-slate-50 py-36 lg:p-10 lg:py-32">
+      <div class="container mx-auto text-center lg:mx-0 lg:text-left">
+        <h6 class="text-green-500 font-semibold headline">Remote Desktop Software</h6>
+        <h1 class="font-bold lg:text-8xl text-6xl headline">
+          Overcoming<br />
+          Distance
+        </h1>
+        <p
+          class="lg:max-w-lg max-w-xs mx-auto lg:mx-0 mt-5 font-semibold text-slate-400 headline"
+        >
+          We beleive in software that enhances the prodictivity and creativity
+          of its users.That is why it is our mission to build a product that
+          enables you to accomplish a great things - from wherever in the world
+          you are.
+        </p>
+        <button
+          class="headline bg-green-500 py-3 mt-10 lg:mt-5 mx-auto lg:mx-0 w-56 rounded-full text-white font-semibold flex justify-center items-center outline outline-2 outline-green-500 hover:bg-green-700 hover:scale-105 duration-500 transition"
+        >
+          <img
+            src="../assets/img/icon/icons/icons/eyes-light.svg"
+            alt=""
+            class="mr-5"
+          />
+          Learn More
+        </button>
+      </div>
+    </section>
+
+    <!-- fecture -->
+    <section>
+      <div class="container mx-auto my-20">
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+          <div class="grid lg:grid-cols-2 lg:gap-5 grid-cols-1 mx-auto lg:mx-0">
+            <div
+              class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-xs py-11 duration-500 transition"
+            >
+              <img
+                src="../assets/img/icon/icons/icons/space-rocket-flying.svg"
+                alt=""
+                class="mx-auto mb-5"
+              />
+              <h1 class="text-green-500 font-bold text-4xl text-center mb-3">
+                Blazing Fast
+              </h1>
+              <p class="text-center font-bold dark:text-slate-500">
+                Minimun latency via our own DeskRT codec, Frame rates of 60 fps.
+              </p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-xs py-11 duration-500 transition"
+            >
+              <img
+                src="../assets/img/icon/icons/icons/app-window-download.svg"
+                alt=""
+                class="mx-auto mb-5"
+              />
+              <h1 class="text-green-500 font-bold text-4xl text-center mb-3">
+                Lightweight
+              </h1>
+              <p class="text-center font-bold dark:text-slate-500">
+                Download 3 MB.<br />
+                Stat Up.<br />
+                Done.
+              </p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-xs py-11 duration-500 transition"
+            >
+              <img
+                src="../assets/img/icon/icons/icons/desktop-monitor-lock.svg"
+                alt=""
+                class="mx-auto mb-5"
+              />
+              <h1 class="text-green-500 font-bold text-4xl text-center mb-3">
+                Secure
+              </h1>
+              <p class="text-center font-bold dark:text-slate-500">
+                Military-grade TLS 1.2 security, 256-bit AES Transport
+                <br />Encrytion
+              </p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-xs py-11 duration-500 transition"
+            >
+              <img
+                src="../assets/img/icon/icons/icons/desktop-monitor-smiley.svg"
+                alt=""
+                class="mx-auto mb-5"
+              />
+              <h1 class="text-green-500 font-bold text-4xl text-center mb-3">
+                Blazing Fast
+              </h1>
+              <p class="text-center font-bold dark:text-slate-500">
+                Works on Windows,<br />
+                MacOs, iOS, Andriod, Linux,<br />
+                Respberry Pi
+              </p>
+            </div>
+          </div>
+          <div class="flex text-center items-center justify-center">
+            <div class="space-y-12">
+              <h1 class="text-4xl lg:text-6xl font-bold dark:text-white headline">
+                Why 500+<br />
+                million users<br />
+                love AnyDesk
+              </h1>
+              <button
+                class="headline bg-green-500 py-3 mt-10 lg:mt-5 mx-auto lg:mx-auto w-56 rounded-full text-white font-semibold flex justify-center items-center outline outline-2 outline-green-500 hover:bg-green-700 hover:scale-105 duration-500 transition"
+              >
+                <img
+                  src="../assets/img/icon/icons/icons/eyes-light.svg"
+                  alt=""
+                  class="mr-5"
+                />
+                Learn More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- client section -->
+    <section class="container mx-auto my-52">
+      <div
+        class="flex flex-col lg:flex-row lg:justify-between lg:items-center text-center lg:text-left space-y-16 lg:space-y-0"
+      >
+        <div class="headline">
+          <h1 class="text-4xl font-bold text-green-500">500+ Million</h1>
+          <h6 class="text-xl text-slate-500 font-bold">Downloads</h6>
+        </div>
+        <div class="headline">
+          <h1 class="text-4xl font-bold text-green-500">400+ Million</h1>
+          <h6 class="text-xl text-slate-500 font-bold">Sessions per month</h6>
+        </div>
+        <div class="headline">
+          <h1 class="text-4xl font-bold text-green-500">300+ Million</h1>
+          <h6 class="text-xl text-slate-500 font-bold">
+            Bridged miles per month
+          </h6>
+        </div>
+      </div>
+    </section>
+
+    <!-- solution -->
+    <section class="container mx-auto my-32">
+      <h1
+        class="lg:text-4xl text-2xl text-slate-900 text-center font-bold mb-20 dark:text-white headline"
+      >
+        Vanilla fits your needs
+      </h1>
+      <div
+        class="flex lg:flex-row flex-col lg:justify-between lg:items-center justify-center lg:space-x-5 space-y-16 lg:space-y-0"
+      >
+        <div
+          class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+        >
+          <img
+            src="../assets/img/icon/icons/icons/house-heart.svg"
+            alt=""
+            class="mx-auto mb-5"
+          />
+          <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
+            Run in Clouds Or On-Premises
+          </h1>
+          <p class="text-center font-bold text-slate-500">
+            Choose our cloud solution to benifit from our infrastructure and
+            service or install on your own servers and work completely
+            independently
+          </p>
+          <a
+            href="#"
+            class="font-bold text-green-500 text-center block mt-5 underline"
+            >Learn more</a
+          >
+        </div>
+        <div
+          class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+        >
+          <img
+            src="../assets/img/icon/icons/icons/phone-action-check.svg"
+            alt=""
+            class="mx-auto mb-5"
+          />
+          <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
+            Full mobile support
+          </h1>
+          <p class="text-center font-bold text-slate-500">
+            Choose our cloud solution to benifit from our infrastructure and
+            service or install on your own servers and work completely
+            independently
+          </p>
+          <a
+            href="#"
+            class="font-bold text-green-500 text-center block mt-5 underline"
+            >Learn more</a
+          >
+        </div>
+        <div
+          class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+        >
+          <img
+            src="../assets/img/icon/icons/icons/color-brush-paint.svg"
+            alt=""
+            class="mx-auto mb-5"
+          />
+          <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
+            Flexibility and Customization
+          </h1>
+          <p class="text-center font-bold text-slate-500">
+            Choose our cloud solution to benifit from our infrastructure and
+            service or install on your own servers and work completely
+            independently
+          </p>
+          <a
+            href="#"
+            class="font-bold text-green-500 text-center block mt-5 underline"
+            >Learn more</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <div class="mx-auto container text-slate-900 my-36"><hr /></div>
+
+    <!-- download section -->
+
+    <section class="container mx-auto">
+      <div class="flex justify-center items-center">
+        <h1 class="font-bold text-4xl lg:max-w-sm max-w-xs text-center dark:text-white">
+          Every operation system, every devices
+        </h1>
+      </div>
+      <p class="text-center font-bold text-slate-500 my-3">
+        Vanilla runs native clients on all platforms
+      </p>
+      <div class="my-20 mx-auto text-center">
+        <div class="grid lg:grid-cols-6 grid-cols-2 gap-10 lg:px-0 px-10">
+          <div
+            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+          >
+            <img
+              src="../assets/img/icon/brands/brands/windows.svg"
+              alt=""
+              class="w-20 mx-auto"
+            />
+            <p class="font-bold dark:text-white">Window</p>
+          </div>
+          <div
+            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+          >
+            <img
+              src="../assets/img/icon/brands/brands/apple.svg"
+              alt=""
+              class="w-16 mx-auto"
+            />
+            <p class="font-bold dark:text-white">Mac Os</p>
+          </div>
+          <div
+            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+          >
+            <img
+              src="../assets/img/icon/brands/brands/linux.svg"
+              alt=""
+              class="w-20 mx-auto"
+            />
+            <p class="font-bold dark:text-white">Linux</p>
+          </div>
+          <div
+            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+          >
+            <img
+              src="../assets/img/icon/brands/brands/android.svg"
+              alt=""
+              class="w-24 mx-auto"
+            />
+            <p class="font-bold dark:text-white">Andriod</p>
+          </div>
+          <div
+            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+          >
+            <img
+              src="../assets/img/icon/brands/brands/raspberry-pi.svg"
+              alt=""
+              class="w-16 mx-auto"
+            />
+            <p class="font-bold dark:text-white">Rasperry Pi</p>
+          </div>
+          <div
+            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+          >
+            <img
+              src="../assets/img/icon/brands/brands/chrome.svg"
+              alt=""
+              class="w-20 mx-auto"
+            />
+            <p class="font-bold dark:text-white">Chrome OS</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-slate-900 dark:bg-slate-800">
+      <div class="container mx-auto p-5">
+        <div
+          class="flex lg:justify-between items-center justify-center lg:flex-row flex-col"
+        >
+          <div class="">
+            <img
+              src="../assets/img/icon/icons/icons/vanilla-logo.svg"
+              alt=""
+              class="w-32"
+            />
+          </div>
+          <div class="">
+            <ul class="flex space-x-5 font-bold text-white">
+              <li
+                class="hover:text-green-500 duration-500 transition cursor-pointer"
+              >
+                Privacy Notice
+              </li>
+              <li
+                class="hover:text-green-500 duration-500 transition cursor-pointer"
+              >
+                Contact
+              </li>
+              <li
+                class="hover:text-green-500 duration-500 transition cursor-pointer"
+              >
+                Why Love?
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/jquery.waypoints.min.js"></script>
+    <script src="./assets/js/scrollreveal.min.js"></script>
+    <script src="./assets/js/cus.js"></script>
+    <script>
+        tailwind.config = {
+        darkMode: "class",
+      };
+
+      ScrollReveal().reveal(".headline", {
+        origin: "bottom",
+        distance: "50px",
+        duration: 2000,
+        reset: true,
+        interval: 200,
+        scale: 0.8,
+        viewFactor: 0.2,
+      });
+    </script>
+  </body>
+</html>
