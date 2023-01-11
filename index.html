@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,20 +26,41 @@
             <img
               src="../assets/img/icon/icons/icons/vanilla-logo.svg"
               alt=""
-              class="w-32"
+              class="w-32 ml-5 lg:ml-0 "
             />
           </div>
           <!-- nav-items -->
-          <div class="">
-            <ul class="flex space-x-5 font-semibold text-slate-500 dark:text-white cursor-pointer">
-              <li class="hover:text-green-500 duration-500 transition">Home</li>
-              <li class="hover:text-green-500 duration-500 transition">Why?</li>
-              <li class="hover:text-green-500 duration-500 transition">Featurs</li>
-              <li class="hover:text-green-500 duration-500 transition">Clients</li>
+          <div class="fixed top-0 lg:top-auto h-screen lg:h-auto lg:bg-white lg:dark:bg-slate-800 bg-slate-300 w-full lg:right-auto right-0 lg:static flex items-center justify-center z-10 -left-full">
+           <div class=" absolute top-0 right-0 w-10 h-10 border lg:hidden border-green-500 rounded-full flex justify-center items-center m-5 close-menu">
+            <i class="fa-solid fa-xmark text-green-500"></i>
+           </div>
+            <ul
+              class="flex flex-col lg:flex-row lg:space-x-5 font-semibold text-slate-500 dark:text-white cursor-pointer"
+            >
+              <a
+                class="hover:text-green-500 duration-500 transition"
+                href="#home"
+                >Home</a
+              >
+              <a
+                class="hover:text-green-500 duration-500 transition"
+                href="#why"
+                >Why?</a
+              >
+              <a
+                class="hover:text-green-500 duration-500 transition"
+                href="#fea"
+                >Featurs</a
+              >
+              <a
+                class="hover:text-green-500 duration-500 transition"
+                href="#cli"
+                >Clients</a
+              >
             </ul>
           </div>
           <!-- dark mode -->
-          <div class="">
+          <div class="flex items-center space-x-3 cursor-pointer">
             <!-- Toggle B -->
             <label for="toggleB" class="flex items-center cursor-pointer">
               <!-- toggle -->
@@ -55,15 +76,23 @@
               </div>
               <!-- label -->
             </label>
+            <div class=" lg:hidden">
+            <i class="fa-solid fa-bars dark:text-white text-green-500 mr-5"></i>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- hero-section -->
-    <section class="flex justify-center my-36 container mx-auto flex-col">
+    <section
+      class="flex justify-center my-36 container mx-auto flex-col"
+      id="home"
+    >
       <div class="">
-        <h1 class="text-6xl mb-5 lg:text-8xl lg:mb-0 font-bold text-center dark:text-white headline">
+        <h1
+          class="text-6xl mb-5 lg:text-8xl lg:mb-0 font-bold text-center dark:text-white headline"
+        >
           Access.<span class="text-green-500 block lg:inline-block">Now.</span>
         </h1>
         <p
@@ -102,9 +131,11 @@
     </section>
 
     <!-- why-section -->
-    <section class="bg-slate-50 py-36 lg:p-10 lg:py-32">
+    <section class="bg-slate-50 py-36 lg:p-10 lg:py-32" id="why">
       <div class="container mx-auto text-center lg:mx-0 lg:text-left">
-        <h6 class="text-green-500 font-semibold headline">Remote Desktop Software</h6>
+        <h6 class="text-green-500 font-semibold headline">
+          Remote Desktop Software
+        </h6>
         <h1 class="font-bold lg:text-8xl text-6xl headline">
           Overcoming<br />
           Distance
@@ -131,7 +162,7 @@
     </section>
 
     <!-- fecture -->
-    <section>
+    <section id="fea">
       <div class="container mx-auto my-20">
         <div class="grid lg:grid-cols-2 grid-cols-1">
           <div class="grid lg:grid-cols-2 lg:gap-5 grid-cols-1 mx-auto lg:mx-0">
@@ -203,7 +234,9 @@
           </div>
           <div class="flex text-center items-center justify-center">
             <div class="space-y-12">
-              <h1 class="text-4xl lg:text-6xl font-bold dark:text-white headline">
+              <h1
+                class="text-4xl lg:text-6xl font-bold dark:text-white headline"
+              >
                 Why 500+<br />
                 million users<br />
                 love AnyDesk
@@ -225,7 +258,7 @@
     </section>
 
     <!-- client section -->
-    <section class="container mx-auto my-52">
+    <section class="container mx-auto my-52" id="cli">
       <div
         class="flex flex-col lg:flex-row lg:justify-between lg:items-center text-center lg:text-left space-y-16 lg:space-y-0"
       >
@@ -331,11 +364,13 @@
 
     <section class="container mx-auto">
       <div class="flex justify-center items-center">
-        <h1 class="font-bold text-4xl lg:max-w-sm max-w-xs text-center dark:text-white">
+        <h1
+          class="font-bold text-4xl lg:max-w-sm max-w-xs text-center dark:text-white headline"
+        >
           Every operation system, every devices
         </h1>
       </div>
-      <p class="text-center font-bold text-slate-500 my-3">
+      <p class="text-center font-bold text-slate-500 my-3 headline">
         Vanilla runs native clients on all platforms
       </p>
       <div class="my-20 mx-auto text-center">
@@ -443,9 +478,16 @@
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/jquery.waypoints.min.js"></script>
     <script src="./assets/js/scrollreveal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="./assets/js/cus.js"></script>
     <script>
-        tailwind.config = {
+      tailwind.config = {
         darkMode: "class",
       };
 

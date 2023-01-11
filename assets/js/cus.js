@@ -20,9 +20,9 @@ toggleB.addEventListener("click", () => {
 });
 
 const theme = localStorage.getItem("data-theme");
-  if (theme === "dark") {
-    changeThemetoDark();
-    toggleB.setAttribute('checked', 'checked')
-  } else {
-    changeThemetoLight();
-  }
+if (theme === "dark") {
+  changeThemetoDark();
+  toggleB.setAttribute("checked", "checked");
+} else {
+  changeThemetoLight();
+}
