@@ -18,7 +18,7 @@
   </head>
   <body class="dark:bg-slate-900">
     <!-- Nav -->
-    <div class="bg-transparent dark:bg-slate-800 py-3 shadow-lg">
+    <div class="bg-white dark:bg-slate-800 py-3 shadow-lg animate__animated w-full z-10" id="fixedNav">
       <div class="container mx-auto items-center">
         <div class="flex justify-between items-center">
           <!-- logo -->
@@ -30,12 +30,12 @@
             />
           </div>
           <!-- nav-items -->
-          <div class="fixed top-0 lg:top-auto h-screen lg:h-auto lg:bg-white lg:dark:bg-slate-800 bg-slate-300 w-full lg:right-auto right-0 lg:static flex items-center justify-center z-10 -left-full lg:left-auto duration-500 transition mobile-menu">
+          <div class="fixed top-0 lg:top-auto h-screen lg:h-auto lg:bg-white lg:dark:bg-slate-800 bg-slate-100 dark:bg-slate-800 w-full lg:right-auto right-0 lg:static flex items-center justify-center z-10 -left-full lg:left-auto duration-500 transition mobile-menu">
            <div class=" absolute top-0 right-0 w-10 h-10 border lg:hidden border-green-500 rounded-full flex justify-center items-center m-5 close-menu">
             <i class="fa-solid fa-xmark text-green-500"></i>
            </div>
             <ul
-              class="flex flex-col lg:flex-row lg:space-x-5 font-semibold text-slate-500 dark:text-white cursor-pointer"
+              class="flex flex-col lg:flex-row lg:space-x-5 lg:space-y-0 text-2xl lg:text-base space-y-10 font-semibold text-slate-500 dark:text-white cursor-pointer"
             >
               <a
                 class="hover:text-green-500 duration-500 transition"
@@ -76,8 +76,8 @@
               </div>
               <!-- label -->
             </label>
-            <div class=" lg:hidden open-menu">
-            <i class="fa-solid fa-bars dark:text-white text-green-500 mr-5"></i>
+            <div class=" lg:hidden open-menu  border border-green-500 flex justify-center items-center rounded-full h-10 w-10 mr-5">
+            <i class="fa-solid fa-bars dark:text-white text-green-500"></i>
             </div>
           </div>
         </div>
@@ -513,6 +513,18 @@
         mobileMenu.style.left = '-100%';
       })
       
+      const fixedNav = document.getElementById('fixedNav')
+    var waypoint = new Waypoint({
+        element: document.getElementById('why'),
+        handler: function(direction) {
+            if (direction === 'down') {
+                fixedNav.classList.add('fixed', 'top-0', 'animate__fadeInDown', 'shadow-lg' )
+            } else {
+                fixedNav.classList.remove('fixed', 'top-0', 'animate__fadeInDown', 'shadow-lg')
+            }
+        },
+        offset: '30%'
+    })
     </script>
   </body>
 </html>
