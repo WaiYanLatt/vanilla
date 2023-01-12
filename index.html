@@ -30,7 +30,7 @@
             />
           </div>
           <!-- nav-items -->
-          <div class="fixed top-0 lg:top-auto h-screen lg:h-auto lg:bg-white lg:dark:bg-slate-800 bg-slate-300 w-full lg:right-auto right-0 lg:static flex items-center justify-center z-10 -left-full">
+          <div class="fixed top-0 lg:top-auto h-screen lg:h-auto lg:bg-white lg:dark:bg-slate-800 bg-slate-300 w-full lg:right-auto right-0 lg:static flex items-center justify-center z-10 -left-full lg:left-auto duration-500 transition mobile-menu">
            <div class=" absolute top-0 right-0 w-10 h-10 border lg:hidden border-green-500 rounded-full flex justify-center items-center m-5 close-menu">
             <i class="fa-solid fa-xmark text-green-500"></i>
            </div>
@@ -76,7 +76,7 @@
               </div>
               <!-- label -->
             </label>
-            <div class=" lg:hidden">
+            <div class=" lg:hidden open-menu">
             <i class="fa-solid fa-bars dark:text-white text-green-500 mr-5"></i>
             </div>
           </div>
@@ -500,6 +500,19 @@
         scale: 0.8,
         viewFactor: 0.2,
       });
+      
+      const openMenu = document.querySelector('.open-menu')
+      const closeMenu = document.querySelector('.close-menu')
+      const mobileMenu = document.querySelector('.mobile-menu')
+
+      openMenu.addEventListener('click', ()=>{
+        mobileMenu.style.left = '0px';
+      })
+
+      closeMenu.addEventListener('click', ()=>{
+        mobileMenu.style.left = '-100%';
+      })
+      
     </script>
   </body>
 </html>
