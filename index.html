@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla</title>
-    <link rel="icon" href="../assets/img/icon/icons/icons/logo.svg" />
+    <link rel="icon" href="./assets/img/icon/icons/icons/logo.svg" />
     <link rel="stylesheet" href="./assets/css/animate.min.css" />
     <link rel="stylesheet" href="./assets/css/cus.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,71 +16,105 @@
     />
   </head>
   <body class="dark:bg-slate-900">
-    <!-- Nav -->
-    <div class="bg-white dark:bg-slate-800 py-3 shadow-lg animate__animated w-full z-10" id="fixedNav">
-      <div class="container mx-auto items-center">
+    <!-- loading -->
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
+
+    <div
+      class="bg-white py-3 dark:bg-slate-800 w-full duration-200 animate__animated shadow-lg"
+      id="fixedNav"
+    >
+      <!-- Navbar S -->
+      <div class="container mx-auto px-5 md:px-0">
         <div class="flex justify-between items-center">
           <!-- logo -->
-          <div class="">
-            <img
-              src="../assets/img/icon/icons/icons/vanilla-logo.svg"
-              alt=""
-              class="w-32 ml-5 lg:ml-0 "
-            />
-          </div>
-          <!-- nav-items -->
-          <div class="fixed top-0 lg:top-auto h-screen lg:h-auto lg:bg-white lg:dark:bg-slate-800 bg-slate-100 dark:bg-slate-800 w-full lg:right-auto right-0 lg:static flex items-center justify-center z-10 -left-full lg:left-auto duration-500 transition mobile-menu">
-           <div class=" absolute top-0 right-0 w-10 h-10 border lg:hidden border-green-500 rounded-full flex justify-center items-center m-5 close-menu">
-            <i class="fa-solid fa-xmark text-green-500"></i>
-           </div>
-            <ul
-              class="flex flex-col lg:flex-row lg:space-x-5 lg:space-y-0 text-2xl lg:text-base space-y-10 font-semibold text-slate-500 dark:text-white cursor-pointer"
+          <div>
+            <svg
+              width="162"
+              height="47"
+              viewBox="0 0 162 47"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <a
-                class="hover:text-green-500 duration-500 transition"
-                href="#home"
-                >Home</a
+              <path
+                d="M65.344 36L56.032 13.28H61.568L67.616 28.416L73.632 13.28H79.232L69.92 36H65.344ZM85.073 36.352C83.0037 36.352 81.2437 35.5307 79.793 33.888C78.3637 32.2453 77.649 30.2827 77.649 28C77.649 25.7173 78.3637 23.7547 79.793 22.112C81.2437 20.4693 83.0037 19.648 85.073 19.648C86.9077 19.648 88.3583 20.2987 89.425 21.6V20H94.257V36H89.425V34.4C88.3583 35.7013 86.9077 36.352 85.073 36.352ZM83.505 30.848C84.1877 31.5947 85.073 31.968 86.161 31.968C87.249 31.968 88.1237 31.5947 88.785 30.848C89.4677 30.1013 89.809 29.152 89.809 28C89.809 26.848 89.4677 25.8987 88.785 25.152C88.1237 24.4053 87.249 24.032 86.161 24.032C85.073 24.032 84.1877 24.4053 83.505 25.152C82.8437 25.8987 82.513 26.848 82.513 28C82.513 29.152 82.8437 30.1013 83.505 30.848ZM98.234 36V20H103.066V21.632C103.983 20.3093 105.466 19.648 107.514 19.648C109.455 19.648 110.97 20.2987 112.058 21.6C113.167 22.9013 113.722 24.6187 113.722 26.752V36H108.89V27.584C108.89 25.216 108.026 24.032 106.298 24.032C105.338 24.032 104.559 24.384 103.962 25.088C103.365 25.792 103.066 26.8373 103.066 28.224V36H98.234ZM119.884 17.824C119.073 17.824 118.369 17.536 117.772 16.96C117.175 16.3627 116.876 15.648 116.876 14.816C116.876 13.984 117.175 13.28 117.772 12.704C118.369 12.1067 119.073 11.808 119.884 11.808C120.737 11.808 121.452 12.1067 122.028 12.704C122.625 13.28 122.924 13.984 122.924 14.816C122.924 15.648 122.625 16.3627 122.028 16.96C121.452 17.536 120.737 17.824 119.884 17.824ZM117.484 36V20H122.316V36H117.484ZM126.297 36V12H131.129V36H126.297ZM135.109 36V12H139.941V36H135.109ZM150.385 36.352C148.316 36.352 146.556 35.5307 145.106 33.888C143.676 32.2453 142.962 30.2827 142.962 28C142.962 25.7173 143.676 23.7547 145.106 22.112C146.556 20.4693 148.316 19.648 150.385 19.648C152.22 19.648 153.671 20.2987 154.738 21.6V20H159.569V36H154.738V34.4C153.671 35.7013 152.22 36.352 150.385 36.352ZM148.818 30.848C149.5 31.5947 150.386 31.968 151.474 31.968C152.562 31.968 153.436 31.5947 154.098 30.848C154.78 30.1013 155.122 29.152 155.122 28C155.122 26.848 154.78 25.8987 154.098 25.152C153.436 24.4053 152.562 24.032 151.474 24.032C150.386 24.032 149.5 24.4053 148.818 25.152C148.156 25.8987 147.826 26.848 147.826 28C147.826 29.152 148.156 30.1013 148.818 30.848Z"
+                fill="#61C454"
+              />
+              <path
+                d="M41 23.1148C41 33.1427 32.9177 41.2295 23 41.2295C13.0823 41.2295 5 33.1427 5 23.1148C5 13.0868 13.0823 5 23 5C32.9177 5 41 13.0868 41 23.1148Z"
+                stroke="#61C454"
+                stroke-width="10"
+              />
+              <path
+                d="M43.5 35.4426C43.5 40.4566 39.4588 44.5 34.5 44.5C29.5412 44.5 25.5 40.4566 25.5 35.4426C25.5 30.4286 29.5412 26.3853 34.5 26.3853C39.4588 26.3853 43.5 30.4286 43.5 35.4426Z"
+                fill="#FEFEFE"
+                stroke="#61C454"
+                stroke-width="5"
+              />
+            </svg>
+          </div>
+          <!-- menu -->
+          <div
+            class="-left-full fixed md:static top-0 md:top-auto md:left-auto flex items-center justify-center duration-300 h-screen md:h-auto md:dark:bg-transparent md:bg-transparent dark:bg-slate-900 bg-white w-full md:w-auto z-10"
+            id="mobile-menu"
+          >
+            <div
+              class="md:hidden absolute md:right-auto md:top-auto right-0 top-0 mt-5 mr-3 border border-green-500 p-2 h-8 w-8 flex items-center justify-center rounded-full close-menu"
+            >
+              <i class="fa-solid fa-xmark dark:text-slate-200"></i>
+            </div>
+            <ul
+              class="flex flex-col md:flex-row md:space-x-5 space-y-10 md:space-y-0"
+            >
+              <li
+                class="text-2xl lg:text-base font-bold dark:text-white text-slate-500 mobile-slide-closed hover:text-green-500"
               >
-              <a
-                class="hover:text-green-500 duration-500 transition"
-                href="#why"
-                >Why?</a
+                <a class="active-link" href="#home">Home</a>
+              </li>
+              <li
+                class="text-2xl lg:text-base font-bold dark:text-white text-slate-500 mobile-slide-closed hover:text-green-500"
               >
-              <a
-                class="hover:text-green-500 duration-500 transition"
-                href="#fea"
-                >Featurs</a
+                <a href="#why">Why?</a>
+              </li>
+              <li
+                class="text-2xl lg:text-base font-bold dark:text-white text-slate-500 mobile-slide-closed hover:text-green-500"
               >
-              <a
-                class="hover:text-green-500 duration-500 transition"
-                href="#cli"
-                >Clients</a
+                <a href="#fea">Features</a>
+              </li>
+              <li
+                class="text-2xl lg:text-base font-bold dark:text-white text-slate-500 mobile-slide-closed hover:text-green-500"
               >
+                <a href="#cli">Clients</a>
+              </li>
             </ul>
           </div>
-          <!-- dark mode -->
-          <div class="flex items-center space-x-3 cursor-pointer">
-            <!-- Toggle B -->
-            <label for="toggleB" class="flex items-center cursor-pointer">
+          <!-- darkmode -->
+          <div class="flex items-center space-x-3">
+            <label for="toggle" class="flex items-center cursor-pointer">
               <!-- toggle -->
               <div class="relative">
                 <!-- input -->
-                <input type="checkbox" id="toggleB" class="sr-only" />
+                <input type="checkbox" id="toggle" class="sr-only" />
                 <!-- line -->
-                <div class="block bg-gray-600 w-14 h-8 rounded-full"></div>
+                <div
+                  class="block bg-green-500 dark:bg-slate-500 w-14 h-8 rounded-full"
+                ></div>
                 <!-- dot -->
                 <div
                   class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"
                 ></div>
               </div>
-              <!-- label -->
             </label>
-            <div class=" lg:hidden open-menu  border border-green-500 flex justify-center items-center rounded-full h-10 w-10 mr-5">
-            <i class="fa-solid fa-bars dark:text-white text-green-500"></i>
+            <div class="menu-icon o-n lg:hidden" id="open-menu">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
       </div>
+      <!-- Navbar E -->
     </div>
 
     <!-- hero-section -->
@@ -256,223 +290,225 @@
       </div>
     </section>
 
-    <!-- client section -->
-    <section class="container mx-auto my-52" id="cli">
-      <div
-        class="flex flex-col lg:flex-row lg:justify-between lg:items-center text-center lg:text-left space-y-16 lg:space-y-0"
-      >
-        <div class="headline">
-          <h1 class="text-4xl font-bold text-green-500">500+ Million</h1>
-          <h6 class="text-xl text-slate-500 font-bold">Downloads</h6>
-        </div>
-        <div class="headline">
-          <h1 class="text-4xl font-bold text-green-500">400+ Million</h1>
-          <h6 class="text-xl text-slate-500 font-bold">Sessions per month</h6>
-        </div>
-        <div class="headline">
-          <h1 class="text-4xl font-bold text-green-500">300+ Million</h1>
-          <h6 class="text-xl text-slate-500 font-bold">
-            Bridged miles per month
-          </h6>
-        </div>
-      </div>
-    </section>
-
-    <!-- solution -->
-    <section class="container mx-auto my-32">
-      <h1
-        class="lg:text-4xl text-2xl text-slate-900 text-center font-bold mb-20 dark:text-white headline"
-      >
-        Vanilla fits your needs
-      </h1>
-      <div
-        class="flex lg:flex-row flex-col lg:justify-between lg:items-center justify-center lg:space-x-5 space-y-16 lg:space-y-0"
-      >
+    <section id="cli">
+      <!-- client section -->
+      <section class="container mx-auto my-52">
         <div
-          class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+          class="flex flex-col lg:flex-row lg:justify-between lg:items-center text-center lg:text-left space-y-16 lg:space-y-0"
         >
-          <img
-            src="../assets/img/icon/icons/icons/house-heart.svg"
-            alt=""
-            class="mx-auto mb-5"
-          />
-          <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
-            Run in Clouds Or On-Premises
-          </h1>
-          <p class="text-center font-bold text-slate-500">
-            Choose our cloud solution to benifit from our infrastructure and
-            service or install on your own servers and work completely
-            independently
-          </p>
-          <a
-            href="#"
-            class="font-bold text-green-500 text-center block mt-5 underline"
-            >Learn more</a
-          >
+          <div class="headline">
+            <h1 class="text-4xl font-bold text-green-500">500+ Million</h1>
+            <h6 class="text-xl text-slate-500 font-bold">Downloads</h6>
+          </div>
+          <div class="headline">
+            <h1 class="text-4xl font-bold text-green-500">400+ Million</h1>
+            <h6 class="text-xl text-slate-500 font-bold">Sessions per month</h6>
+          </div>
+          <div class="headline">
+            <h1 class="text-4xl font-bold text-green-500">300+ Million</h1>
+            <h6 class="text-xl text-slate-500 font-bold">
+              Bridged miles per month
+            </h6>
+          </div>
         </div>
-        <div
-          class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
-        >
-          <img
-            src="../assets/img/icon/icons/icons/phone-action-check.svg"
-            alt=""
-            class="mx-auto mb-5"
-          />
-          <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
-            Full mobile support
-          </h1>
-          <p class="text-center font-bold text-slate-500">
-            Choose our cloud solution to benifit from our infrastructure and
-            service or install on your own servers and work completely
-            independently
-          </p>
-          <a
-            href="#"
-            class="font-bold text-green-500 text-center block mt-5 underline"
-            >Learn more</a
-          >
-        </div>
-        <div
-          class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
-        >
-          <img
-            src="../assets/img/icon/icons/icons/color-brush-paint.svg"
-            alt=""
-            class="mx-auto mb-5"
-          />
-          <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
-            Flexibility and Customization
-          </h1>
-          <p class="text-center font-bold text-slate-500">
-            Choose our cloud solution to benifit from our infrastructure and
-            service or install on your own servers and work completely
-            independently
-          </p>
-          <a
-            href="#"
-            class="font-bold text-green-500 text-center block mt-5 underline"
-            >Learn more</a
-          >
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <div class="mx-auto container text-slate-900 my-36"><hr /></div>
-
-    <!-- download section -->
-
-    <section class="container mx-auto">
-      <div class="flex justify-center items-center">
+      <!-- solution -->
+      <section class="container mx-auto my-32">
         <h1
-          class="font-bold text-4xl lg:max-w-sm max-w-xs text-center dark:text-white headline"
+          class="lg:text-4xl text-2xl text-slate-900 text-center font-bold mb-20 dark:text-white headline"
         >
-          Every operation system, every devices
+          Vanilla fits your needs
         </h1>
-      </div>
-      <p class="text-center font-bold text-slate-500 my-3 headline">
-        Vanilla runs native clients on all platforms
-      </p>
-      <div class="my-20 mx-auto text-center">
-        <div class="grid lg:grid-cols-6 grid-cols-2 gap-10 lg:px-0 px-10">
-          <div
-            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
-          >
-            <img
-              src="../assets/img/icon/brands/brands/windows.svg"
-              alt=""
-              class="w-20 mx-auto"
-            />
-            <p class="font-bold dark:text-white">Window</p>
-          </div>
-          <div
-            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
-          >
-            <img
-              src="../assets/img/icon/brands/brands/apple.svg"
-              alt=""
-              class="w-16 mx-auto"
-            />
-            <p class="font-bold dark:text-white">Mac Os</p>
-          </div>
-          <div
-            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
-          >
-            <img
-              src="../assets/img/icon/brands/brands/linux.svg"
-              alt=""
-              class="w-20 mx-auto"
-            />
-            <p class="font-bold dark:text-white">Linux</p>
-          </div>
-          <div
-            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
-          >
-            <img
-              src="../assets/img/icon/brands/brands/android.svg"
-              alt=""
-              class="w-24 mx-auto"
-            />
-            <p class="font-bold dark:text-white">Andriod</p>
-          </div>
-          <div
-            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
-          >
-            <img
-              src="../assets/img/icon/brands/brands/raspberry-pi.svg"
-              alt=""
-              class="w-16 mx-auto"
-            />
-            <p class="font-bold dark:text-white">Rasperry Pi</p>
-          </div>
-          <div
-            class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
-          >
-            <img
-              src="../assets/img/icon/brands/brands/chrome.svg"
-              alt=""
-              class="w-20 mx-auto"
-            />
-            <p class="font-bold dark:text-white">Chrome OS</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- footer -->
-    <footer class="bg-slate-900 dark:bg-slate-800">
-      <div class="container mx-auto p-5">
         <div
-          class="flex lg:justify-between items-center justify-center lg:flex-row flex-col"
+          class="flex lg:flex-row flex-col lg:justify-between lg:items-center justify-center lg:space-x-5 space-y-16 lg:space-y-0"
         >
-          <div class="">
+          <div
+            class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+          >
             <img
-              src="../assets/img/icon/icons/icons/vanilla-logo.svg"
+              src="../assets/img/icon/icons/icons/house-heart.svg"
               alt=""
-              class="w-32"
+              class="mx-auto mb-5"
             />
+            <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
+              Run in Clouds Or On-Premises
+            </h1>
+            <p class="text-center font-bold text-slate-500">
+              Choose our cloud solution to benifit from our infrastructure and
+              service or install on your own servers and work completely
+              independently
+            </p>
+            <a
+              href="#"
+              class="font-bold text-green-500 text-center block mt-5 underline"
+              >Learn more</a
+            >
           </div>
-          <div class="">
-            <ul class="flex space-x-5 font-bold text-white">
-              <li
-                class="hover:text-green-500 duration-500 transition cursor-pointer"
-              >
-                Privacy Notice
-              </li>
-              <li
-                class="hover:text-green-500 duration-500 transition cursor-pointer"
-              >
-                Contact
-              </li>
-              <li
-                class="hover:text-green-500 duration-500 transition cursor-pointer"
-              >
-                Why Love?
-              </li>
-            </ul>
+          <div
+            class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+          >
+            <img
+              src="../assets/img/icon/icons/icons/phone-action-check.svg"
+              alt=""
+              class="mx-auto mb-5"
+            />
+            <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
+              Full mobile support
+            </h1>
+            <p class="text-center font-bold text-slate-500">
+              Choose our cloud solution to benifit from our infrastructure and
+              service or install on your own servers and work completely
+              independently
+            </p>
+            <a
+              href="#"
+              class="font-bold text-green-500 text-center block mt-5 underline"
+              >Learn more</a
+            >
+          </div>
+          <div
+            class="headline hover:border cursor-pointer my-3 lg:my-0 rounded-3xl border-green-500 p-5 max-w-md py-11 duration-500 transition m-10 lg:m-0"
+          >
+            <img
+              src="../assets/img/icon/icons/icons/color-brush-paint.svg"
+              alt=""
+              class="mx-auto mb-5"
+            />
+            <h1 class="text-slate-900 text-2xl font-bold text-center mb-3">
+              Flexibility and Customization
+            </h1>
+            <p class="text-center font-bold text-slate-500">
+              Choose our cloud solution to benifit from our infrastructure and
+              service or install on your own servers and work completely
+              independently
+            </p>
+            <a
+              href="#"
+              class="font-bold text-green-500 text-center block mt-5 underline"
+              >Learn more</a
+            >
           </div>
         </div>
-      </div>
-    </footer>
+      </section>
+
+      <div class="mx-auto container text-slate-900 my-36"><hr /></div>
+
+      <!-- download section -->
+
+      <section class="container mx-auto">
+        <div class="flex justify-center items-center">
+          <h1
+            class="font-bold text-4xl lg:max-w-sm max-w-xs text-center dark:text-white headline"
+          >
+            Every operation system, every devices
+          </h1>
+        </div>
+        <p class="text-center font-bold text-slate-500 my-3 headline">
+          Vanilla runs native clients on all platforms
+        </p>
+        <div class="my-20 mx-auto text-center">
+          <div class="grid lg:grid-cols-6 grid-cols-2 gap-10 lg:px-0 px-10">
+            <div
+              class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+            >
+              <img
+                src="../assets/img/icon/brands/brands/windows.svg"
+                alt=""
+                class="w-20 mx-auto"
+              />
+              <p class="font-bold dark:text-white">Window</p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+            >
+              <img
+                src="../assets/img/icon/brands/brands/apple.svg"
+                alt=""
+                class="w-16 mx-auto"
+              />
+              <p class="font-bold dark:text-white">Mac Os</p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+            >
+              <img
+                src="../assets/img/icon/brands/brands/linux.svg"
+                alt=""
+                class="w-20 mx-auto"
+              />
+              <p class="font-bold dark:text-white">Linux</p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+            >
+              <img
+                src="../assets/img/icon/brands/brands/android.svg"
+                alt=""
+                class="w-24 mx-auto"
+              />
+              <p class="font-bold dark:text-white">Andriod</p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+            >
+              <img
+                src="../assets/img/icon/brands/brands/raspberry-pi.svg"
+                alt=""
+                class="w-16 mx-auto"
+              />
+              <p class="font-bold dark:text-white">Rasperry Pi</p>
+            </div>
+            <div
+              class="headline hover:border cursor-pointer transition duration-500 border-green-500 rounded-3xl p-5"
+            >
+              <img
+                src="../assets/img/icon/brands/brands/chrome.svg"
+                alt=""
+                class="w-20 mx-auto"
+              />
+              <p class="font-bold dark:text-white">Chrome OS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer -->
+      <footer class="bg-slate-900 dark:bg-slate-800">
+        <div class="container mx-auto p-5">
+          <div
+            class="flex lg:justify-between items-center justify-center lg:flex-row flex-col"
+          >
+            <div class="">
+              <img
+                src="../assets/img/icon/icons/icons/vanilla-logo.svg"
+                alt=""
+                class="w-32"
+              />
+            </div>
+            <div class="">
+              <ul class="flex space-x-5 font-bold text-white">
+                <li
+                  class="hover:text-green-500 duration-500 transition cursor-pointer"
+                >
+                  Privacy Notice
+                </li>
+                <li
+                  class="hover:text-green-500 duration-500 transition cursor-pointer"
+                >
+                  Contact
+                </li>
+                <li
+                  class="hover:text-green-500 duration-500 transition cursor-pointer"
+                >
+                  Why Love?
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
 
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/jquery.waypoints.min.js"></script>
@@ -500,31 +536,55 @@
         scale: 0.8,
         viewFactor: 0.2,
       });
-      
-      const openMenu = document.querySelector('.open-menu')
-      const closeMenu = document.querySelector('.close-menu')
-      const mobileMenu = document.querySelector('.mobile-menu')
 
-      openMenu.addEventListener('click', ()=>{
-        mobileMenu.style.left = '0px';
-      })
+      // Menu
+      const openMenu = document.querySelector("#open-menu");
+      const closeMenu = document.querySelector(".close-menu");
+      const mobileMenu = document.querySelector("#mobile-menu");
 
-      closeMenu.addEventListener('click', ()=>{
-        mobileMenu.style.left = '-100%';
-      })
-      
-      const fixedNav = document.getElementById('fixedNav')
-    var waypoint = new Waypoint({
-        element: document.getElementById('why'),
-        handler: function(direction) {
-            if (direction === 'down') {
-                fixedNav.classList.add('fixed', 'top-0', 'animate__fadeInDown', 'shadow-lg' )
-            } else {
-                fixedNav.classList.remove('fixed', 'top-0', 'animate__fadeInDown', 'shadow-lg')
-            }
+      openMenu.addEventListener("click", () => {
+        mobileMenu.style.left = "0px";
+      });
+
+      closeMenu.addEventListener("click", () => {
+        mobileMenu.style.left = "-100%";
+      });
+
+      let mobileSlideClosed = document.querySelectorAll(".mobile-slide-closed");
+
+      for (let i = 0; i < mobileSlideClosed.length; i++) {
+        // console.log(mobileSlideClosed[i])
+        mobileSlideClosed[i].addEventListener("click", () => {
+          mobileMenu.style.left = "-100%";
+        });
+      }
+
+      const fixedNav = document.getElementById("fixedNav");
+      var waypoint = new Waypoint({
+        element: document.getElementById("why"),
+        handler: function (direction) {
+          if (direction === "down") {
+            fixedNav.classList.add(
+              "fixed",
+              "top-0",
+              "animate__fadeInDown",
+              "shadow-lg",
+              "bg-white",
+              "z-10"
+            );
+          } else {
+            fixedNav.classList.remove(
+              "fixed",
+              "top-0",
+              "animate__fadeInDown",
+              "shadow-lg",
+              "bg-white",
+              "z-10"
+            );
+          }
         },
-        offset: '30%'
-    })
+        offset: "20%",
+      });
     </script>
   </body>
 </html>

@@ -1,28 +1,63 @@
-const toggleB = document.getElementById("toggleB");
+const toggle = document.getElementById("toggle");
 
-const changeThemetoDark = () => {
+const changeThemeToDark = () => {
   document.documentElement.classList.add("dark");
-  localStorage.setItem("data-theme", "dark");
+  localStorage.setItem("theme", "dark");
 };
 
-const changeThemetoLight = () => {
+const changeThemeToLight = () => {
   document.documentElement.classList.remove("dark");
-  localStorage.setItem("data-theme", "light");
+  localStorage.setItem("theme", "light");
 };
 
-toggleB.addEventListener("click", () => {
-  const theme = localStorage.getItem("data-theme");
+toggle.addEventListener("click", () => {
+  const theme = localStorage.getItem("theme");
   if (theme === "dark") {
-    changeThemetoLight();
+    changeThemeToLight();
   } else {
-    changeThemetoDark();
+    changeThemeToDark();
   }
 });
 
-const theme = localStorage.getItem("data-theme");
+const theme = localStorage.getItem("theme");
 if (theme === "dark") {
-  changeThemetoDark();
-  toggleB.setAttribute("checked", "checked");
+  changeThemeToDark();
+  toggle.setAttribute("checked", "checked");
 } else {
-  changeThemetoLight();
+  changeThemeToLight();
 }
+
+//scrool active
+
+window.addEventListener("scroll", scrollActive);
+const sections = document.querySelectorAll("section[id]");
+
+function scrollActive() {
+  const scrollY = window.pageYOffset; // scroll height
+  sections.forEach((current) => {
+    const sectionHeight = current.offsetHeight, // get current height
+      sectionTop = current.offsetTop - 58, // get current section of height
+      sectionId = current.getAttribute("id"); // get current section id
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document
+        .querySelector("a[href*=" + sectionId + "]")
+        .classList.add("active-link");
+    } else {
+      document
+        .querySelector("a[href*=" + sectionId + "]")
+        .classList.remove("active-link");
+    }
+  });
+}
+
+//loading
+
+window.addEventListener("load", () => {
+  document.querySelector(".loading").style.display = "none";
+});
+
+// menu icon
+let menuIcon = document.querySelector(".menu-icon");
+menuIcon.addEventListener("click", () => {
+  menuIcon.classList.toggle("show");
+});
